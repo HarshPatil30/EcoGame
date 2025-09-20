@@ -9,9 +9,13 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Space+Mono&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="home.css" />
+    <link rel="stylesheet" href="loading.css" />
+    <script src="anime.min.js"></script>
 </head>
 
 <body class="home">
+    <!-- Cinematic Loading Screen -->
+    <script src="loading.js"></script>
     <header class="hero">
         <img src="images/earth.png" alt="Earth in the background" class="hero-earth" />
         <div class="hero-content">
@@ -44,8 +48,9 @@
                 <h3>Real-World Challenges</h3>
                 <p>Put your knowledge into action and earn points for real-world eco-friendly activities. Every action, no matter how small, makes a difference!</p>
             </a>
+      
         </div>
-        <div class="leaderboard-link">
+        <div class="leaderboard-link" style="text-align:center; margin-top:24px;">
             <a href="leaderboard.html" class="btn-secondary">View Leaderboard</a>
         </div>
     </section>
@@ -65,10 +70,13 @@
     </section>
 
     <section class="games-section">
-        <h2 class="section-title">New Game Coming Soon...</h2>
-        <div class="new-game-text">
-            <p>Stay tuned! We're working on an exciting new game to help you become an even bigger hero for our planet.</p>
-        </div>
+        <section class="new-game-section" style="margin:48px 0 0 0; text-align:center;">
+            <h2 class="section-title" style="color:#7ce37c; font-size:2.1rem; margin:36px 0 24px 0;">🌳 Ideal Forest</h2>
+            <a href="ideal-forest.html" class="game-card special-game-card" style="display:inline-block; max-width:340px; margin:0 auto 36px auto; box-shadow:0 0 32px #7ce37c55,0 2px 12px #254a2a44; border:2px solid #7ce37c; background:linear-gradient(135deg,#101418 60%,#254a2a 100%);">
+                <h3 style="color:#7ce37c; font-size:1.35rem; margin-bottom:8px; letter-spacing:.04em;">Build Your Forest</h3>
+                <p style="color:#e6efe6; font-size:1.08rem;">Experience the magic of building your own forest and learn how every tree helps our planet thrive.</p>
+            </a>
+        </section>
     </section>
 
     <section class="awareness-section">

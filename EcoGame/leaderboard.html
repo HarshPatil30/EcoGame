@@ -78,8 +78,11 @@
 </head>
 
 <body class="home">
-        <section class="info-section" style="display:flex; justify-content:center; align-items:center; min-height:80vh;">
-                        <div class="lb-card">
+    <div style="text-align:center; margin-top:32px;">
+        <a href="index.html" class="btn-secondary" style="font-size:1.08rem; padding:10px 28px; border-radius:999px; margin-bottom:18px; display:inline-block; box-shadow:0 2px 12px #7ce37c44;">🏠 Home</a>
+    </div>
+    <section class="info-section" style="display:flex; justify-content:center; align-items:center; min-height:80vh;">
+        <div class="lb-card">
                                 <h2 style="color:#7ce37c; margin-bottom:18px; text-align:center; font-size:2rem; letter-spacing:.02em;">Leaderboard</h2>
                                 <div style="margin-bottom:18px; text-align:center;">
                                     <label for="gameFilter" style="color:#cee3ff; font-weight:600; margin-right:8px;">Filter by game:</label>
@@ -110,18 +113,18 @@
         }
 
         function render(players) {
-            const ul = document.getElementById('lb');
-            ul.innerHTML = players.length ? players.map((p, i) => {
-                const r = i + 1;
-                return `<li>
-          <span class="lb-rank">#${r}</span>
-          <span class="lb-name">${p.name}</span>
-          <span class="lb-points">${p.total||0} pts</span>
-          <span class="lb-tier">${tier(r)}</span>
-          <span class="lb-game">${p.game || 'Unknown'}</span>
-          <span class="lb-date">${p.lastPlayed ? new Date(p.lastPlayed).toLocaleString() : ''}</span>
-        </li>`;
-            }).join('') : '<li>No scores yet.</li>';
+                        const ul = document.getElementById('lb');
+                        ul.innerHTML = players.length ? players.map((p, i) => {
+                                const r = i + 1;
+                                                return `<li>
+                                    <span class="lb-rank">${r}</span>
+                                    <span class="lb-name">${p.name}</span>
+                                    <span class="lb-points">${p.total||0} pts</span>
+                                    <span class="lb-tier">${tier(r)}</span>
+                                    <span class="lb-game">${p.game || 'Unknown'}</span>
+                                    <span class="lb-date">${p.lastPlayed ? new Date(p.lastPlayed).toLocaleString() : ''}</span>
+                                </li>`;
+                        }).join('') : '<li>No scores yet.</li>';
         }
 
         async function updateLeaderboard() {
