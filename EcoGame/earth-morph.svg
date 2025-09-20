@@ -1,6 +1,0 @@
-<svg id="eco-morph-earth" viewBox="0 0 400 400" width="400" height="400" xmlns="http://www.w3.org/2000/svg">
-  <g>
-    <path id="earth-shape" fill="#7ce37c" d="M200,50a150,150 0 1,0 0,300a150,150 0 1,0 0,-300" />
-    <path id="earth-continents" fill="#254a2a" d="M120,180c20,-40 80,-40 100,0c-10,30 -60,30 -100,0z" />
-  </g>
-</svg>
